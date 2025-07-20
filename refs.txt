@@ -1,0 +1,18 @@
+https://codepen.io/ykosinets/pen/gbOOOeZ
+
+paper with zoom:
+https://codepen.io/neatnait/pen/kvoWBX
+https://codepen.io/nomack/pen/DrKzQK
+
+handdrawn css
+https://fxaeberhard.github.io/handdrawn.css/
+
+doodle css
+https://github.com/chr15m/DoodleCSS?tab=readme-ov-file
+
+rough js:
+https://roughjs.com/
+https://wiredjs.com/
+
+notation:
+https://awik.io/animated-hand-drawn-style-highlight-underline-annotations-roughnotation-js/

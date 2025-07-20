@@ -14,7 +14,7 @@ html {
     --warning: #d4c252;
     --danger: #df4c57;
     --muted: #868e96;
-    --primary-light: white;
+    --primary-light: rgb(255, 255, 255);
     --secondary-light: #69a1d4;
     --success-light: #82ca84;
     --warning-light: #d9c966;
@@ -42,7 +42,7 @@ html {
     --main-background: var(--primary);
     --main-background-light: #c1c0bd;
     --black: black;
-    --primary-text: var(--primary);
+    --primary-text: white;
     --secondary-text: #1f476b;
     --success-text: #265927;
     --warning-text: #71651c;
@@ -59,7 +59,7 @@ html {
 html,
 body {
     background: repeat url(canvas-texture.png), var(--primary);
-    color: var(--primary-light);
+    color: var(--primary-text);
     font-size: 16px;
 }
 
@@ -188,12 +188,15 @@ h6 {
     font-size: 0.8rem;
 }
 
+p {
+    margin: 1rem 0;
+}
+
 img.framed {
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
-    border-color: var(--primary-light);
     border-color: var(--primary-light);
     border-style: solid;
     border-width: 2px;
@@ -264,7 +267,6 @@ ul.inline li {
 /* Utilities */
 .border {
     border-color: var(--primary-light);
-    border-color: var(--primary-light);
     border-style: solid;
     border-width: 2px;
     border-bottom-left-radius: 15px 255px;
@@ -287,31 +289,25 @@ ul.inline li {
 
 .border-primary {
     border-color: var(--primary-light);
-    border-color: var(--primary-light);
 }
 
 .border-secondary {
-    border-color: var(--primary-light);
     border-color: var(--secondary);
 }
 
 .border-success {
-    border-color: var(--primary-light);
     border-color: var(--success);
 }
 
 .border-warning {
-    border-color: var(--primary-light);
     border-color: var(--warning);
 }
 
 .border-danger {
-    border-color: var(--primary-light);
     border-color: var(--danger);
 }
 
 .border-muted {
-    border-color: var(--primary-light);
     border-color: var(--muted);
 }
 
@@ -345,8 +341,7 @@ ul.inline li {
 }
 
 .collapsible>input:checked+label {
-    color: var(--primary-light);
-    color: var(--primary-light);
+    color: var(--primary-text);
 }
 
 .collapsible>input[id^=collapsible]:checked~div.collapsible-body {
@@ -357,9 +352,7 @@ ul.inline li {
 }
 
 .collapsible>label {
-    color: var(--primary-light);
-    color: var(--primary-light);
-    border-bottom-color: var(--primary-light);
+    color: var(--primary-text);
     border-bottom-color: var(--muted-light);
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -371,13 +364,11 @@ ul.inline li {
 }
 
 .collapsible>label:hover {
-    color: var(--primary-light);
     color: var(--muted);
     cursor: pointer;
 }
 
 .alert {
-    border-color: var(--primary-light);
     border-color: var(--primary-light);
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
@@ -441,7 +432,7 @@ ul.breadcrumb li::before {
 }
 
 ul.breadcrumb li a {
-    color: var(--primary-light);
+    color: var(--primary-text);
     color: var(--secondary);
     background-image: none;
     text-decoration: none;
@@ -466,7 +457,7 @@ button,
     transition: all 235ms ease 0s;
     box-shadow: var(--element-box-shadow);
     transition: all 235ms ease-in-out 0s;
-    color: var(--primary-light);
+    color: var(--primary-text);
     border-color: var(--primary-light);
     background-color: var(--main-background);
     align-self: center;
@@ -480,35 +471,10 @@ button,
     padding: 0.75rem;
 }
 
-button.btn-large,
-.button.btn-large,
-[type=button].btn-large {
-    transition: all 235ms ease 0s;
-    box-shadow: 20px 38px 34px -26px var(--shadow-color-regular);
-    font-size: 2rem;
-    padding: 1rem;
-}
-
-button.btn-small,
-.button.btn-small,
-[type=button].btn-small {
-    transition: all 235ms ease 0s;
-    box-shadow: 10px 19px 17px -13px var(--shadow-color-regular);
-    font-size: 0.75rem;
-    padding: 0.5rem;
-}
-
-button.btn-block,
-.button.btn-block,
-[type=button].btn-block {
-    display: block;
-    width: 100%;
-}
-
 button:hover,
 .button:hover,
 [type=button]:hover {
-    transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 3px, 0) rotate(-2.5deg);
     box-shadow: 2px 8px 8px -5px rgba(255, 255, 255, 0.3);
 }
 
@@ -529,18 +495,8 @@ button:active,
     transition: none;
 }
 
-button.disabled,
-button[disabled],
-.button.disabled,
-.button[disabled],
-[type=button].disabled,
-[type=button][disabled] {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
 a {
-    color: var(--primary-light);
+    color: var(--primary-text);
     color: var(--secondary);
     background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
     background-position: 0 90%;
@@ -550,17 +506,18 @@ a {
 }
 
 a:visited {
-    color: var(--primary-light);
-    color: var(--primary-light);
+    color: var(--primary-text);
     text-decoration: none;
 }
 
+button:hover,
+.button:hover,
 button.btn-primary,
 .button.btn-primary,
 [type=button].btn-primary {
     color: var(--primary-text);
     background-color: var(--primary-light);
-    border-color: var(--primary-light);
+    border-color: var(--primary-dark);
 }
 
 button.btn-primary:hover:active,
@@ -701,7 +658,7 @@ button.btn-danger:hover:active,
 input,
 select,
 textarea {
-    color: var(--primary-light);
+    color: var(--primary-text);
     border-color: var(--primary-light);
     background: transparent;
     border-bottom-left-radius: 15px 255px;
@@ -729,17 +686,6 @@ select {
     height: 2.35rem;
 }
 
-.disabled,
-input.disabled,
-input[disabled],
-select.disabled,
-select[disabled],
-textarea.disabled,
-textarea[disabled] {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
 .tabs .content {
     display: none;
     flex-basis: 100%;
@@ -751,8 +697,8 @@ textarea[disabled] {
 }
 
 .tabs input:checked+label {
-    color: var(--primary-light);
-    color: var(--primary-light);
+    color: var(--primary-text);
+    color: var(--primary-text);
     border-bottom-color: var(--primary-light);
     border-bottom-color: var(--secondary);
     border-bottom-style: solid;
@@ -800,7 +746,7 @@ textarea[disabled] {
 }
 
 .tabs label {
-    color: var(--primary-light);
+    color: var(--primary-text);
     display: inline-block;
     font-weight: 600;
     margin: 0 0 -1px;
@@ -809,7 +755,7 @@ textarea[disabled] {
 }
 
 .tabs label:hover {
-    color: var(--primary-light);
+    color: var(--primary-text);
     color: var(--muted);
     cursor: pointer;
 }
