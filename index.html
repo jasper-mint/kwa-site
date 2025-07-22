@@ -14,18 +14,36 @@
     <link rel="stylesheet" href="style/style.css" />
     <!-- The favicon (icon on the tab in the browser) -->
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Script for the writing effects (rough notation)-->
+    <script src="scripts/rough-notation/rough-notation.js"></script>
+    <!-- Script and style for the snow-->
+    <link rel="stylesheet" href="scripts/snow/snow.css" />
+    <script src="scripts/snow/snow.js"></script>
+
+    <!-- The aurora -->
+    <link rel="stylesheet" href="scripts/aurora/aurora.css" />
+    <script src="scripts/aurora/aurora.js"></script>
 </head>
 
 <body>
+    <canvas class="aurora" id="canvas"></canvas>
+    <div class="snow" id="snow" data-count="200"></div>
+
     <main>
         <!-- Header -->
         <header>
-            <img src="avatar.jpg" />
-            <h1>GiantKwakwa</h1>
+            <img src="avatar.png" />
+            <h1 id="name">Kwa</h1>
         </header>
 
         <!-- Socials -->
         <section class="button-column">
+            <a href="#" class="button icon-button">
+                <img src="style/social-icons/Bluesky.png"></span>
+                <span>Bluesky</span>
+            </a>
+
             <a href="#" class="button icon-button">
                 <img src="style/social-icons/DeviantArt.png"></span>
                 <span>DeviantArt</span>
@@ -37,13 +55,13 @@
             </a>
 
             <a href="#" class="button icon-button">
-                <img src="style/social-icons/Bluesky.png"></span>
-                <span>Bluesky</span>
+                <img src="style/social-icons/Furaffinity.png"></span>
+                <span>Fur Affinity</span>
             </a>
 
             <a href="#" class="button icon-button">
-                <img src="style/social-icons/Furaffinity.png"></span>
-                <span>Fur Affinity</span>
+                <img src="style/social-icons/itaku.png"></span>
+                <span>Itaku</span>
             </a>
 
             <a href="#" class="button icon-button">
@@ -90,5 +108,25 @@
         </section>
     </main>
 </body>
+
+<script>/*
+    // ==== Username animation ====
+    // Find the id for the name text header at the top (id is "name")
+    let name = document.getElementById("name");
+
+    // Make animations
+    let underline = RoughNotation.annotate(name, { type: "highlight", color: "rgba(105, 161, 255,  0.75)", strokeWidth: 3, animationDuration: 500, padding: 10 });
+
+    // Add them to an animation group
+    let animationGroup = RoughNotation.annotationGroup([underline]);
+
+    // Show the animation group
+    animationGroup.show();
+
+    // ==== Snow ====
+    // Animate snow
+    createSnow();
+    showSnow(true);A*/
+</script>
 
 </html>

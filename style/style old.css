@@ -1,14 +1,7 @@
 /* Declare the font (ShantellSans) as "SiteFont" */
 @font-face {
     font-family: "SiteFont";
-    src: url('font/Shanetell/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf');
-    font-style: normal;
-    line-height: 1.0rem;
-}
-
-@font-face {
-    font-family: "HeaderFont";
-    src: url('font/Crete_Round/CreteRound-Regular.ttf');
+    src: url('font/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf');
     font-style: normal;
     line-height: 1.0rem;
 }
@@ -16,15 +9,28 @@
 /* Declare all the color variables */
 html {
     --primary: rgb(10, 14, 16);
-    --secondary: #2977bb;
+    --secondary: #5595ce;
+    --success: #70c272;
+    --warning: #d4c252;
+    --danger: #df4c57;
     --muted: #868e96;
     --primary-light: rgb(255, 255, 255);
-    --secondary-light: #4089cd;
+    --secondary-light: #69a1d4;
+    --success-light: #82ca84;
+    --warning-light: #d9c966;
+    --danger-light: #e3626b;
+    --muted-light: #949ba2;
     --primary-dark: rgb(153, 153, 153);
     --secondary-dark: #1f476b;
+    --success-dark: #265927;
+    --warning-dark: #71651c;
+    --danger-dark: #7c161e;
     --muted-dark: #313538;
     --primary-darker: #9c9c9c;
     --secondary-darker: #1c486e;
+    --success-darker: #307932;
+    --warning-darker: #7f701d;
+    --danger-darker: #9c1a25;
     --muted-darker: #6c757d;
     --primary-shaded-50: #343332;
     --primary-shaded-70: #2f2e2d;
@@ -33,10 +39,14 @@ html {
     --light-dark: rgba(255, 255, 255, 0.7);
     --white: white;
     --paper-background: rgba(0, 0, 0, 0.5);
-    --main-background: rgba(20, 25, 27, 0.85);
+    --main-background: var(--primary);
+    --main-background-light: #c1c0bd;
     --black: black;
     --primary-text: white;
-    --secondary-text: #bfefff;
+    --secondary-text: #1f476b;
+    --success-text: #265927;
+    --warning-text: #71651c;
+    --danger-text: #7c161e;
     --shadow-color-regular: rgba(255, 255, 255, 0.1);
     --element-box-shadow: 5px 5px 9px 1px var(--shadow-color-regular);
 }
@@ -48,7 +58,7 @@ html {
 
 html,
 body {
-    background: repeat url(canvas-texture.png), linear-gradient(#06001e, #000000) fixed, var(--primary);
+    background: repeat url(canvas-texture.png), var(--primary);
     color: var(--primary-text);
     font-size: 16px;
 }
@@ -70,13 +80,6 @@ header {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-header h1 {
-    background-image: linear-gradient(0deg, #aee0ff, #42b6ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* the avatar */
@@ -151,31 +154,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 1000px;
-    z-index: 1;
-    padding: 1rem;
-    backdrop-filter: blur(7px);
-    border: 1px solid #c3e0ff57;
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 5px 2px rgb(0, 21, 30);
 }
 
 .paper {
-    backdrop-filter: blur(7px);
     background-color: var(--paper-background);
     border: 1px solid var(--muted);
     box-shadow: var(--element-box-shadow);
+    margin: 1rem;
     padding: 2rem;
-}
-
-header,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "HeaderFont", Arial;
 }
 
 h1 {
@@ -219,6 +205,65 @@ img.framed {
     max-width: 100%;
 }
 
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style-type: upper-alpha;
+}
+
+ol ol ol {
+    list-style-type: upper-roman;
+}
+
+ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+ul li::before {
+    content: "-";
+}
+
+ul li {
+    text-indent: -7px;
+}
+
+ul li::before {
+    left: -7px;
+    position: relative;
+}
+
+ul ul li::before {
+    content: "+";
+}
+
+ul ul ul li::before {
+    content: "~";
+}
+
+ul ul ul ul li::before {
+    content: "⤍";
+}
+
+ul ul ul ul ul li::before {
+    content: "⁎";
+}
+
+ul.inline li {
+    display: inline;
+    margin-left: 5px;
+}
+
 /* Utilities */
 .border {
     border-color: var(--primary-light);
@@ -248,6 +293,18 @@ img.framed {
 
 .border-secondary {
     border-color: var(--secondary);
+}
+
+.border-success {
+    border-color: var(--success);
+}
+
+.border-warning {
+    border-color: var(--warning);
+}
+
+.border-danger {
+    border-color: var(--danger);
 }
 
 .border-muted {
@@ -336,10 +393,63 @@ img.framed {
     border-color: var(--secondary);
 }
 
+.alert-success {
+    color: var(--success-text);
+    background-color: var(--success-light);
+    border-color: var(--success);
+}
+
+.alert-warning {
+    color: var(--warning-text);
+    background-color: var(--warning-light);
+    border-color: var(--warning);
+}
+
+.alert-danger {
+    color: var(--danger-text);
+    background-color: var(--danger-light);
+    border-color: var(--danger);
+}
+
+.alert-muted {
+    color: var(--muted-text);
+    background-color: var(--muted-light);
+    border-color: var(--muted);
+}
+
+ul.breadcrumb {
+    list-style: none;
+    padding: 10px 16px;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 20px;
+}
+
+ul.breadcrumb li::before {
+    content: "";
+}
+
+ul.breadcrumb li a {
+    color: var(--primary-text);
+    color: var(--secondary);
+    background-image: none;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+ul.breadcrumb li+li::before {
+    content: "/ ";
+    padding: 8px;
+}
+
 button,
 .button,
 [type=button] {
-    backdrop-filter: blur(7px);
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
@@ -365,10 +475,7 @@ button:hover,
 .button:hover,
 [type=button]:hover {
     transform: translate3d(0, 3px, 0) rotate(-2.5deg);
-    box-shadow: 2px 8px 8px -5px rgba(0, 255, 255, 0.3);
-    color: var(--secondary-text);
-    background-color: var(--secondary-light);
-    border-color: var(--secondary);
+    box-shadow: 2px 8px 8px -5px rgba(255, 255, 255, 0.3);
 }
 
 button:focus,
@@ -378,7 +485,7 @@ button:focus,
     border-color: var(--secondary);
     border-style: solid;
     border-width: 2px;
-    box-shadow: 2px 8px 4px -6px rgba(0, 255, 255, 0.3);
+    box-shadow: 2px 8px 4px -6px rgba(255, 255, 255, 0.3);
 }
 
 button:active,
@@ -403,6 +510,78 @@ a:visited {
     text-decoration: none;
 }
 
+button:hover,
+.button:hover,
+button.btn-primary,
+.button.btn-primary,
+[type=button].btn-primary {
+    color: var(--primary-text);
+    background-color: var(--primary-light);
+    border-color: var(--primary-dark);
+}
+
+button.btn-primary:hover:active,
+.button.btn-primary:hover:active,
+[type=button].btn-primary:hover:active {
+    background-color: #b4b3b0;
+}
+
+button.btn-secondary,
+.button.btn-secondary,
+[type=button].btn-secondary {
+    color: var(--secondary-text);
+    background-color: var(--secondary-light);
+    border-color: var(--secondary);
+}
+
+button.btn-secondary:hover:active,
+.button.btn-secondary:hover:active,
+[type=button].btn-secondary:hover:active {
+    background-color: #a7d3fa;
+}
+
+button.btn-success,
+.button.btn-success,
+[type=button].btn-success {
+    color: var(--success-text);
+    background-color: var(--success-light);
+    border-color: var(--success);
+}
+
+button.btn-success:hover:active,
+.button.btn-success:hover:active,
+[type=button].btn-success:hover:active {
+    background-color: #bccca8;
+}
+
+button.btn-warning,
+.button.btn-warning,
+[type=button].btn-warning {
+    color: var(--warning-text);
+    background-color: var(--warning-light);
+    border-color: var(--warning);
+}
+
+button.btn-warning:hover:active,
+.button.btn-warning:hover:active,
+[type=button].btn-warning:hover:active {
+    background-color: #ede49b;
+}
+
+button.btn-danger,
+.button.btn-danger,
+[type=button].btn-danger {
+    color: var(--danger-text);
+    background-color: var(--danger-light);
+    border-color: var(--danger);
+}
+
+button.btn-danger:hover:active,
+.button.btn-danger:hover:active,
+[type=button].btn-danger:hover:active {
+    background-color: #e6a5a1;
+}
+
 .card {
     transition: all 235ms ease 0s;
     box-shadow: 15px 28px 25px -18px var(--shadow-color-regular);
@@ -420,7 +599,7 @@ a:visited {
 
 .card:hover {
     transform: translate3d(0, 2px, 0);
-    box-shadow: 2px 8px 8px -5px rgba(0, 255, 255, 0.3);
+    box-shadow: 2px 8px 8px -5px rgba(255, 255, 255, 0.3);
 }
 
 .card .card-header,
