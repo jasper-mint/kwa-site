@@ -15,28 +15,12 @@
 
 /* Declare all the color variables */
 html {
-    --primary: rgb(10, 14, 16);
-    --secondary: #2977bb;
+    --border-radius: 0.25rem;
     --muted: #868e96;
-    --primary-light: rgb(255, 255, 255);
-    --secondary-light: #4089cd;
-    --primary-dark: rgb(153, 153, 153);
-    --secondary-dark: #1f476b;
-    --muted-dark: #313538;
-    --primary-darker: #9c9c9c;
-    --secondary-darker: #1c486e;
-    --muted-darker: #6c757d;
-    --primary-shaded-50: #343332;
-    --primary-shaded-70: #2f2e2d;
-    --white-dark: rgba(255, 255, 255, 0.03);
-    --white-dark-light-80: rgba(255, 255, 255, 0.03);
-    --light-dark: rgba(255, 255, 255, 0.7);
-    --white: white;
+    --primary-light: rgba(170, 197, 226, 0.8);
     --paper-background: rgba(0, 0, 0, 0.5);
-    --main-background: rgba(20, 25, 27, 0.85);
-    --black: black;
+    --main-background: rgba(0, 0, 0, 0.85);
     --primary-text: white;
-    --secondary-text: #bfefff;
     --shadow-color-regular: rgba(255, 255, 255, 0.1);
     --element-box-shadow: 5px 5px 9px 1px var(--shadow-color-regular);
 }
@@ -48,7 +32,7 @@ html {
 
 html,
 body {
-    background: repeat url(canvas-texture.png), linear-gradient(#06001e, #000000) fixed, var(--primary);
+    background: repeat url(stardust-texture.png), linear-gradient(#000 40%, #0c2038 100%) fixed, rgb(10, 14, 16);
     color: var(--primary-text);
     font-size: 16px;
 }
@@ -73,7 +57,7 @@ header {
 }
 
 header h1 {
-    background-image: linear-gradient(0deg, #aee0ff, #42b6ff);
+    background-image: linear-gradient(0deg, #0072b6, #67c4fe);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -154,14 +138,15 @@ main {
     max-width: 1000px;
     z-index: 1;
     padding: 1rem;
-    backdrop-filter: blur(7px);
-    border: 1px solid #c3e0ff57;
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 5px 2px rgb(0, 21, 30);
+    backdrop-filter: blur(25px);
+    border: 1px solid #b2e5ff57;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 10px 3px rgb(0, 21, 30);
+    background: rgba(45, 60, 69, 0.2);
 }
 
 .paper {
-    backdrop-filter: blur(7px);
+    border-radius: var(--border-radius);
     background-color: var(--paper-background);
     border: 1px solid var(--muted);
     box-shadow: var(--element-box-shadow);
@@ -255,91 +240,9 @@ img.framed {
 }
 
 /* Components */
-.collapsible {
-    display: flex;
-    flex-direction: column;
-}
-
-.collapsible:nth-of-type(1) {
-    border-top-color: var(--muted-light);
-    border-top-style: solid;
-    border-top-width: 1px;
-}
-
-.collapsible .collapsible-body {
-    border-bottom-color: var(--muted-light);
-    background-color: var(--white-dark-light-80);
-    transition: all 235ms ease-in-out 0s;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    margin: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0 0.75rem;
-}
-
-.collapsible>input {
-    display: none;
-}
-
-.collapsible>input:checked+label {
-    color: var(--primary-text);
-}
-
-.collapsible>input[id^=collapsible]:checked~div.collapsible-body {
-    margin: 0;
-    max-height: 960px;
-    opacity: 1;
-    padding: 0.75rem;
-}
-
-.collapsible>label {
-    color: var(--primary-text);
-    border-bottom-color: var(--muted-light);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    display: inline-block;
-    font-weight: 600;
-    margin: 0 0 -1px;
-    padding: 0.75rem;
-    text-align: center;
-}
-
-.collapsible>label:hover {
-    color: var(--muted);
-    cursor: pointer;
-}
-
-.alert {
-    border-color: var(--primary-light);
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 20px;
-    padding: 15px;
-    width: 100%;
-}
-
-.alert-primary {
-    color: var(--primary-text);
-    background-color: var(--primary-light);
-    border-color: var(--primary-light);
-}
-
-.alert-secondary {
-    color: var(--secondary-text);
-    background-color: var(--secondary-light);
-    border-color: var(--secondary);
-}
-
 button,
 .button,
 [type=button] {
-    backdrop-filter: blur(7px);
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
@@ -366,16 +269,16 @@ button:hover,
 [type=button]:hover {
     transform: translate3d(0, 3px, 0) rotate(-2.5deg);
     box-shadow: 2px 8px 8px -5px rgba(0, 255, 255, 0.3);
-    color: var(--secondary-text);
-    background-color: var(--secondary-light);
-    border-color: var(--secondary);
+    color: #bfefff;
+    background-color: #4089cd;
+    border-color: #2977bb;
 }
 
 button:focus,
 .button:focus,
 [type=button]:focus {
     border-color: var(--primary-light);
-    border-color: var(--secondary);
+    border-color: #2977bb;
     border-style: solid;
     border-width: 2px;
     box-shadow: 2px 8px 4px -6px rgba(0, 255, 255, 0.3);
@@ -390,7 +293,7 @@ button:active,
 
 a {
     color: var(--primary-text);
-    color: var(--secondary);
+    color: #2977bb;
     background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
     background-position: 0 90%;
     background-repeat: repeat-x;
@@ -406,7 +309,7 @@ a:visited {
 .card {
     transition: all 235ms ease 0s;
     box-shadow: 15px 28px 25px -18px var(--shadow-color-regular);
-    border-color: var(--muted-light);
+    border-color: #d9dfe5;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-style: solid;
@@ -425,8 +328,8 @@ a:visited {
 
 .card .card-header,
 .card .card-footer {
-    background-color: var(--white-dark);
-    border-color: var(--muted-light);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: #d9dfe5;
     padding: 0.75rem 1.25rem;
 }
 
@@ -498,7 +401,7 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: var(--primary-light);
-    border-color: var(--secondary);
+    border-color: #2977bb;
     border-style: solid;
     border-width: 2px;
 }
@@ -521,7 +424,7 @@ select {
     color: var(--primary-text);
     color: var(--primary-text);
     border-bottom-color: var(--primary-light);
-    border-bottom-color: var(--secondary);
+    border-bottom-color: #2977bb;
     border-bottom-style: solid;
     border-bottom-width: 3px;
 }
