@@ -72,7 +72,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 1rem;
     font-size: 2rem;
     align-items: center;
@@ -89,7 +89,7 @@ header h1 {
 
 /* the avatar */
 header img {
-    height: 128px;
+    height: 150px;
 }
 
 hr {
