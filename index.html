@@ -15,15 +15,12 @@
     <!-- The favicon (icon on the tab in the browser) -->
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <!-- Script for the writing effects (rough notation)-->
-    <script src="scripts/rough-notation/rough-notation.js"></script>
-    <!-- Script and style for the snow-->
-    <link rel="stylesheet" href="scripts/snow/snow.css" />
-    <script src="scripts/snow/snow.js"></script>
-
-    <!-- The aurora -->
-    <link rel="stylesheet" href="scripts/aurora/aurora.css" />
-    <script src="scripts/aurora/aurora.js"></script>
+    <!-- Here are the colors for the aurora -->
+    <script>
+        let auroraColor1 = 'rgb(25, 198, 237)';
+        let auroraColor2 = 'rgb(171, 9, 221)';
+        let auroraColor3 = 'rgb(7, 68, 223)';
+    </script>
 </head>
 
 <body>
@@ -38,43 +35,45 @@
         </header>
 
         <!-- Socials -->
+        <!-- Commented out the socials that aren't used right now -->
+        <!-- Just change the href value to change the link -->
         <section class="button-column">
-            <a href="#" class="button icon-button">
+            <a href="https://bsky.app/profile/kwakwa.bsky.social" class="button icon-button">
                 <img src="style/social-icons/Bluesky.png"></span>
                 <span>Bluesky</span>
             </a>
 
-            <a href="#" class="button icon-button">
+            <!-- <a href="#" class="button icon-button">
                 <img src="style/social-icons/DeviantArt.png"></span>
                 <span>DeviantArt</span>
-            </a>
+            </a> -->
 
-            <a href="#" class="button icon-button">
+            <a href="https://discordapp.com/users/266276169706504212" class="button icon-button">
                 <img src="style/social-icons/Discord.png"></span>
                 <span>Discord</span>
             </a>
 
-            <a href="#" class="button icon-button">
+            <a href="https://www.furaffinity.net/user/airbendingkwakwa" class="button icon-button">
                 <img src="style/social-icons/Furaffinity.png"></span>
                 <span>Fur Affinity</span>
             </a>
 
-            <a href="#" class="button icon-button">
+            <a href="https://itaku.ee/profile/kwakwa" class="button icon-button">
                 <img src="style/social-icons/itaku.png"></span>
                 <span>Itaku</span>
             </a>
 
-            <a href="#" class="button icon-button">
+            <a href="https://www.patreon.com/airbendingkwakwa" class="button icon-button">
                 <img src="style/social-icons/Patreon.png"></span>
                 <span>Patreon</span>
             </a>
 
-            <a href="#" class="button icon-button">
+            <!-- <a href="#" class="button icon-button">
                 <img src="style/social-icons/Tumblr.png"></span>
                 <span>Tumblr</span>
-            </a>
+            </a> -->
 
-            <a href="#" class="button icon-button">
+            <a href="https://x.com/GiantKwakwa" class="button icon-button">
                 <img src="style/social-icons/Twitter.png"></span>
                 <span>Twitter</span>
             </a>
@@ -109,24 +108,12 @@
     </main>
 </body>
 
-<script>/*
-    // ==== Username animation ====
-    // Find the id for the name text header at the top (id is "name")
-    let name = document.getElementById("name");
+<!-- Script and style for the snow-->
+<link rel="stylesheet" href="scripts/snow/snow.css" />
+<script src="scripts/snow/snow.js"></script>
 
-    // Make animations
-    let underline = RoughNotation.annotate(name, { type: "highlight", color: "rgba(105, 161, 255,  0.75)", strokeWidth: 3, animationDuration: 500, padding: 10 });
-
-    // Add them to an animation group
-    let animationGroup = RoughNotation.annotationGroup([underline]);
-
-    // Show the animation group
-    animationGroup.show();
-
-    // ==== Snow ====
-    // Animate snow
-    createSnow();
-    showSnow(true);A*/
-</script>
+<!-- The aurora -->
+<link rel="stylesheet" href="scripts/aurora/aurora.css" />
+<script src="scripts/aurora/aurora.js"></script>
 
 </html>

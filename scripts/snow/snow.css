@@ -1,16 +1,13 @@
 body {
     overflow-x: hidden;
     min-height: 100vh;
-    /* If you want to change the site height you can remove overflow-y */
-    /* pureSnow will automatically detect height of body tag */
-    overflow-y: hidden;
 }
 
 .snowflake {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: linear-gradient(white, white);
+    background: linear-gradient(white, rgb(169, 233, 237));
     /* Workaround for Chromium's selective color inversion */
     border-radius: 50%;
     filter: drop-shadow(0 0 10px white);

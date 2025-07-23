@@ -85,17 +85,17 @@
         }
 
         for (var i = 0; i < shapeNum; i++) {
-            var s = new Shape(ctx, i * num, Y / 2, i, 'rgba(25, 198, 237, 1)');
+            var s = new Shape(ctx, i * num, Y / 2, i, auroraColor1);
             shapes.push(s);
         }
 
         for (var i = 0; i < shapeNum; i++) {
-            var s = new Shape(ctx, i * num, Y / 2, i * 5, 'rgb(171, 9, 221)');
+            var s = new Shape(ctx, i * num, Y / 2, i * 5, auroraColor2);
             shapes.push(s);
         }
 
         for (var i = 0; i < shapeNum; i++) {
-            var s = new Shape(ctx, i * num, Y / 2, i * 10, 'rgba(7, 68, 223, 1)');
+            var s = new Shape(ctx, i * num, Y / 2, i * 10, auroraColor3);
             shapes.push(s);
         }
 
@@ -144,17 +144,17 @@
             }
             shapes = [];
             for (var i = 0; i < shapeNum; i++) {
-                var s = new Shape(ctx, i * num, Y / 2, i, 'rgba(25, 198, 237, 1)');
+                var s = new Shape(ctx, i * num, Y / 2, i, auroraColor1);
                 shapes.push(s);
             }
 
             for (var i = 0; i < shapeNum; i++) {
-                var s = new Shape(ctx, i * num, Y / 2, i * 5, 'rgb(171, 9, 221)');
+                var s = new Shape(ctx, i * num, Y / 2, i * 5, auroraColor2);
                 shapes.push(s);
             }
 
             for (var i = 0; i < shapeNum; i++) {
-                var s = new Shape(ctx, i * num, Y / 2, i * 10, 'rgba(7, 68, 223, 1)');
+                var s = new Shape(ctx, i * num, Y / 2, i * 10, auroraColor3);
                 shapes.push(s);
             }
         }

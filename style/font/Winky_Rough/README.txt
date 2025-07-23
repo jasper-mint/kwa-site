@@ -1,22 +1,32 @@
-Quicksand Variable Font
-=======================
+Winky Rough Variable Font
+=========================
 
-This download contains Quicksand as both a variable font and static fonts.
+This download contains Winky Rough as both variable fonts and static fonts.
 
-Quicksand is a variable font with this axis:
+Winky Rough is a variable font with this axis:
   wght
 
-This means all the styles are contained in a single file:
-  Quicksand-VariableFont_wght.ttf
+This means all the styles are contained in these files:
+  WinkyRough-VariableFont_wght.ttf
+  WinkyRough-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Quicksand:
-  static/Quicksand-Light.ttf
-  static/Quicksand-Regular.ttf
-  static/Quicksand-Medium.ttf
-  static/Quicksand-SemiBold.ttf
-  static/Quicksand-Bold.ttf
+in those cases you can use the static font files for Winky Rough:
+  static/WinkyRough-Light.ttf
+  static/WinkyRough-Regular.ttf
+  static/WinkyRough-Medium.ttf
+  static/WinkyRough-SemiBold.ttf
+  static/WinkyRough-Bold.ttf
+  static/WinkyRough-ExtraBold.ttf
+  static/WinkyRough-Black.ttf
+  static/WinkyRough-LightItalic.ttf
+  static/WinkyRough-Italic.ttf
+  static/WinkyRough-MediumItalic.ttf
+  static/WinkyRough-SemiBoldItalic.ttf
+  static/WinkyRough-BoldItalic.ttf
+  static/WinkyRough-ExtraBoldItalic.ttf
+  static/WinkyRough-BlackItalic.ttf
 
 Get started
 -----------
