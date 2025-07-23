@@ -18,7 +18,7 @@
 html {
     --background-gradient: linear-gradient(hsl(0, 0%, 0%) 40%, hsl(213, 65%, 13%) 100%);
     --border-radius: 0.25rem;
-    --header-text: linear-gradient(0deg, hsl(228, 96%, 67%), hsl(188, 95%, 85%));
+    --header-text: linear-gradient(0deg, hsl(226, 73%, 49%), hsl(188, 100%, 82%));
     --scrollbar-colors: hsl(205, 14%, 65%) hsl(0, 0%, 0%);
     --selection-text: hsl(194, 88%, 84%);
     --selection-background: hsla(204, 100%, 50%, 0.5);
@@ -35,7 +35,7 @@ html {
     --element-box-shadow: 5px 5px 9px 1px var(--shadow-color-regular);
     --main-border: hsla(200, 100%, 85%, 0.35);
     --main-shadow-color: hsl(198, 100%, 6%);
-    --main-background: hsla(203, 21%, 22%, 0.2);
+    --main-background: linear-gradient(0deg, hsla(203, 33%, 17%, 0.15) 75%, hsla(0, 0%, 0%, 0.8));
 }
 
 * {
