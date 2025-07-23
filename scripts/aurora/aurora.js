@@ -26,7 +26,7 @@
         var height = 33;
         var scaleX = 0.25;
 
-        var fps = 20, fpsInterval, startTime, now, then, elapsed;
+        var fps = 10, fpsInterval, startTime, now, then, elapsed;
 
         if (X < 768) {
             height = 30;
